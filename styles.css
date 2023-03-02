@@ -1,0 +1,116 @@
+
+*{
+    margin:0px;
+    padding:0px;
+}
+.heading-container{
+    background-color: rgba(202,210,197,255);
+    height:100vh;
+    grid-area: heading;
+}
+.item{
+    background-color: rgba(47,61,70,255);
+}
+.fa-brands{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: rgba(255,255,255,255);
+    background-color: rgba(47,61,70,255);
+    position: relative;
+    top:18px;
+    left: 15px;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom:25px;
+    color: rgba(255,255,255,255);
+    font-family: Helvetica;
+    font-size: 30px;
+}
+.body-container{
+    display: grid;
+    height: 80%;
+    grid-template-columns: 1fr .8fr .8fr .8fr 0.2fr;
+    grid-template-rows: 0.8fr 1fr 2fr 1fr 2fr;
+    grid-template-areas: 
+    "leftitem search search search"
+    "leftitem . . . "
+    "leftitem  miniitem1 miniitem2 miniitem3"
+    "leftitem . . ."
+    "leftitem bottom bottom bottom";
+    color: azure;
+    
+}
+.leftitem{
+    background-color: rgba(53,53,53,255);
+    margin: 15px 15px 0px 15px;
+    grid-area: leftitem;
+    border-radius: 15px;
+}
+.search{
+    background-color: rgba(53,53,53,255);
+    grid-area: search;
+    border-radius: 15px;
+    margin: 15px 10px 10px 10px;
+    font-family: Helvetica;
+    color:rgba(155,155,155,255);
+    display: grid;
+    align-items:center;
+}
+h3{
+    margin-left: 10px;
+}
+.miniitem1{
+    background-color: rgba(53,53,53,255);
+    grid-area: miniitem1;
+    margin:15px;
+    border-radius: 15px;
+}
+.miniitem2{
+    background-color: rgba(53,53,53,255);
+    grid-area: miniitem2;
+    margin:15px;
+    border-radius: 15px;
+}
+.miniitem3{
+    background-color: rgba(53,53,53,255);
+    grid-area: miniitem3;
+    margin:15px;
+    border-radius: 15px;
+}
+.bottom{
+    background-color: rgba(53,53,53,255);
+    grid-area: bottom;
+    border-radius: 15px;
+    margin: 10px 10px 0px 10px;;
+}
+
+@media only screen and (max-width: 550px) {
+    .body-container{
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 0.2fr 2fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+        "heading"
+        "search"
+        "leftitem"
+        "miniitem1"
+        "miniitem2"
+        "miniitem3"
+        "bottom"
+        ;
+    }
+    .search{
+        height: 30px;
+        display: grid;
+        justify-content:center;
+        align-items: center;
+        border-radius: 5px;
+    }
+  }
+
